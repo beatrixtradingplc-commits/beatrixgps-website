@@ -1,0 +1,110 @@
+import { Car, MapPin, ClipboardCheck } from "lucide-react";
+
+export default function BeatrixHome() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
+      {/* አርእስት (Navbar) */}
+      <header className="flex justify-between items-center px-8 py-4 bg-white shadow-md">
+        <img src="/logo/beatrix-logo.png" alt="Beatrix Logo" className="h-12" />
+        <nav className="space-x-6 text-sm md:text-base">
+          <a href="#services" className="hover:text-blue-700">አገልግሎቶች</a>
+          <a href="#partners" className="hover:text-blue-700">ባለስልጣኖች</a>
+          <a href="#about" className="hover:text-blue-700">ስለ እኛ</a>
+          <a href="#contact" className="bg-blue-700 text-white px-4 py-2 rounded-lg">አግኙን</a>
+        </nav>
+      </header>
+
+      {/* ዋና ክፍል (Hero) */}
+      <section className="relative flex flex-col items-center text-center py-24 px-6 bg-gradient-to-r from-blue-700 to-blue-500 text-white overflow-hidden">
+        <img src="/logo/beatrix-logo.png" alt="Beatrix Watermark" className="absolute opacity-10 w-1/2 md:w-1/3" />
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 relative z-10">ብሩህ GPS እና የቡድን አስተዳደር</h2>
+        <p className="max-w-2xl text-lg mb-2 relative z-10">
+          Beatrix በአዲስ አበባ ከተማ ጋር የተረጋገጠ የGPS አተካካሪና የቡድን አስተዳደር አጋር ነው።
+          በእውነተኛ ጊዜ መረጃ በመጠቀም እንዲቀንሱና እንዲያድጉ እንረዳቸዋለን።
+        </p>
+        <p className="italic text-lg mb-6 relative z-10">“Connecting the Dots”</p>
+        <a href="#contact" className="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100 relative z-10 transition">ጀምር</a>
+      </section>
+
+      {/* አገልግሎቶች */}
+      <section id="services" className="py-20 px-8 grid md:grid-cols-3 gap-10 text-center">
+        <div className="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
+          <Car className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+          <h3 className="text-xl font-bold mb-3">የቡድን አስተዳደር</h3>
+          <p className="text-gray-600">ተሽከርካሪዎችን በእውነተኛ ጊዜ ይከታተሉ፣ መንገዶችን ያስተካክሉ፣ ወጪንም ያሳነሱ።</p>
+        </div>
+        <div className="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
+          <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+          <h3 className="text-xl font-bold mb-3">GPS መጫኛ</h3>
+          <p className="text-gray-600">በመንግሥት የተረጋገጠ GPS አተካካሪ ለሞተርሳይክል፣ መኪና፣ እና ኤ-ባይክ።</p>
+        </div>
+        <div className="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
+          <ClipboardCheck className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+          <h3 className="text-xl font-bold mb-3">ፓሌት እና ፈቃድ ሂደት</h3>
+          <p className="text-gray-600">አዲስ ፓሌት፣ እንደገና ማስያዝ እና ከመንግሥት ጋር በመተባበር ሂደቶችን እናስተናግዳለን።</p>
+        </div>
+      </section>
+
+      {/* አጋሮች */}
+      <section id="partners" className="bg-gray-100 py-20 px-8 text-center">
+        <h3 className="text-3xl font-bold mb-6">ባለስልጣኖች እና ደንበኞች</h3>
+        <p className="mb-8 text-gray-700">Beatrix በኢትዮጵያ ውስጥ ታላላቅ መንግሥታዊ ተቋማትና የግል ኩባንያዎች የታመነች ናት።</p>
+
+        {/* መንግሥታዊ አጋሮች */}
+        <h4 className="text-xl font-semibold mb-4">መንግሥታዊ እና ዋና አጋሮች</h4>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center mb-12">
+          <img src="/partners/dodai.png" alt="Dodai" className="h-16 mx-auto grayscale hover:grayscale-0 transition" />
+          <img src="/partners/transport.png" alt="Addis Ababa Transport Bureau" className="h-16 mx-auto grayscale hover:grayscale-0 transition" />
+          <img src="/partners/licensing.png" alt="Driver & Vehicle Licensing Authority" className="h-16 mx-auto grayscale hover:grayscale-0 transition" />
+          <img src="/partners/beatrix.png" alt="Beatrix GPS" className="h-16 mx-auto grayscale hover:grayscale-0 transition" />
+        </div>
+
+        {/* የኩባንያ ደንበኞች */}
+        <h4 className="text-xl font-semibold mb-4">የኩባንያ ደንበኞች</h4>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-center">
+          <img src="/customers/ethiopost.png" alt="EthioPost" className="h-14 mx-auto grayscale hover:grayscale-0 transition" />
+          <img src="/customers/nile-insurance.png" alt="Nile Insurance" className="h-14 mx-auto grayscale hover:grayscale-0 transition" />
+          <img src="/customers/hansa-flowers.png" alt="Hansa Flowers" className="h-14 mx-auto grayscale hover:grayscale-0 transition" />
+          <img src="/customers/ardent-coffee.png" alt="Ardent Coffee Export" className="h-14 mx-auto grayscale hover:grayscale-0 transition" />
+          <img src="/customers/sanchos.png" alt="Sancho’s" className="h-14 mx-auto grayscale hover:grayscale-0 transition" />
+        </div>
+      </section>
+
+      {/* ስለ እኛ */}
+      <section id="about" className="py-20 px-8 max-w-3xl mx-auto text-center">
+        <h3 className="text-3xl font-bold mb-4">ስለ Beatrix</h3>
+        <p className="text-gray-700 leading-relaxed">
+          Beatrix በ2021 ተመሥርታ በኢትዮጵያ ውስጥ ተሽከርካሪ እና ኢ-ሞቢሊቲ ዘርፍን በአዳዲስ ቴክኖሎጂ ለመቀየር ተሳትፋለች።
+          ከ2000+ ደንበኞች ጋር በመስራትና ከመንግሥት ባለስልጣኖች ጋር በመተባበር የወደፊት ትራንስፖርትን እያቀናቀን ነው።
+        </p>
+      </section>
+
+      {/* ኮንታክት */}
+      <footer id="contact" className="bg-blue-700 text-white py-16 px-8 text-center">
+        <img src="/logo/beatrix-logo.png" alt="Beatrix Logo" className="h-12 mx-auto mb-4" />
+        <h4 className="text-2xl font-bold mb-6">አግኙን (Contact Us)</h4>
+
+        <form className="max-w-lg mx-auto text-left space-y-4">
+          <div>
+            <label className="block mb-1">ስም (Name)</label>
+            <input type="text" className="w-full px-4 py-2 rounded text-gray-900" placeholder="ስምዎን ያስገቡ" />
+          </div>
+          <div>
+            <label className="block mb-1">ኢሜይል (Email)</label>
+            <input type="email" className="w-full px-4 py-2 rounded text-gray-900" placeholder="ኢሜይልዎን ያስገቡ" />
+          </div>
+          <div>
+            <label className="block mb-1">መልእክት (Message)</label>
+            <textarea className="w-full px-4 py-2 rounded text-gray-900" rows="4" placeholder="መልእክትዎን ያስገቡ"></textarea>
+          </div>
+          <button type="submit" className="bg-white text-blue-700 font-semibold px-6 py-2 rounded hover:bg-gray-100 transition">
+            ላክ (Send)
+          </button>
+        </form>
+
+        <p className="mt-8">Email: beatrixtradingplc@gmail.com | Phone: +251 968 045 408</p>
+        <p className="mt-4 text-sm">© {new Date().getFullYear()} Beatrix Trading PLC. All Rights Reserved.</p>
+      </footer>
+    </div>
+  )
+}
